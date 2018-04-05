@@ -10,9 +10,9 @@
     <h2>首页<h2>
     
     <font> 
-        <#list userList as item> 
-            ${item!}<br />
-        </#list>
+        <#-- list userList as item --> 
+        <#--   // ${item!}<br /> -->
+       <#--list-->
     </font>
     
     <button class="a"> click me</button>
