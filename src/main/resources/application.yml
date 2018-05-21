@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/Fun
+    url: jdbc:mysql://47.104.173.115:3306/Fun
     username: root
-    password: 123456
+    password: root
   mybatis:
   type-aliases-package: com.mm.fun.bean
   

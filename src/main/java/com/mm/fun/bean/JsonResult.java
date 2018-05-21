@@ -2,9 +2,9 @@ package com.mm.fun.bean;
 
 public class JsonResult {
 
-	private String status = null;
+	private String status = "";
 
-	private Object result = null;
+	private String result = "";
 
 	public JsonResult status(String status) {
 		this.status = status;
@@ -19,11 +19,11 @@ public class JsonResult {
 		this.status = status;
 	}
 
-	public Object getResult() {
+	public String getResult() {
 		return result;
 	}
 
-	public void setResult(Object result) {
+	public void setResult(String result) {
 		this.result = result;
 	}
 

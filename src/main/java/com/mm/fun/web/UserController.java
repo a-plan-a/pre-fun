@@ -28,7 +28,6 @@ public class UserController {
 		JsonResult r = new JsonResult();
 		try {
 			User user = userService.getUserByPhoneNum(phoneNum);
-			r.setResult(user);
 			r.setStatus("ok");
 		} catch (Exception e) {
 			r.setResult(e.getClass().getName() + ":" + e.getMessage());
