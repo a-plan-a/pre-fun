@@ -27,7 +27,7 @@ public class RecommendController {
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(value = "/recommend", method = RequestMethod.GET)
+	@RequestMapping(value = "/recommend/insert", method = RequestMethod.GET)
 	public ResponseEntity<JsonResult> getUserById(
 			@RequestParam(name = "d", required = false, defaultValue = "0") String d) {
 		JsonResult r = new JsonResult();
@@ -40,11 +40,14 @@ public class RecommendController {
 			String profilePhone = (String) json.get("photo");
 			String detail = (String) json.get("detail");
 			String phone = (String) json.get("phone");
+			String categoryId = (String) json.get("categoryID");
+			
 			recommend.setDetail(detail);
 			recommend.setPhone(phone);
 			recommend.setName(name);
 			recommend.setProfilePhone(profilePhone);
 			recommend.setTitle(title);
+			recommend.setCategoryNO(categoryId);
 			recommendationService.insert(recommend);
 			r.setStatus("success");
 		} catch (Exception e) {

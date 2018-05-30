@@ -2,6 +2,13 @@ package com.mm.fun.bean;
 
 public class Recommendation {
 	private String id;
+	private String categoryNO;
+	public String getCategoryNO() {
+		return categoryNO;
+	}
+	public void setCategoryNO(String categoryNO) {
+		this.categoryNO = categoryNO;
+	}
 	public String getId() {
 		return id;
 	}

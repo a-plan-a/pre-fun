@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 public interface RecommendationMapper {
-	@Insert("INSERT INTO RECOMMANDATION (TITLE,NAME,PROFILE_PHOTO,PHONE,DISCRIBUTION) VALUES (#{title},#{name},#{profilePhoto},#{phone},#{detail})")
+	@Insert("INSERT INTO RECOMMANDATION (TITLE,NAME,PROFILE_PHOTO,PHONE,DISCRIBUTION,CATEGORY_NO ) VALUES (#{title},#{name},#{profilePhoto},#{phone},#{detail},#{categoryNO})")
 	int insert(Recommendation commend);
 	
 	@Select("select * from RECOMMANDATION where CATEGORY_NO =#{categoryNO}")  
